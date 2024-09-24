@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: #7D1E3A; /* Cor vinho */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            text-align: center;
+            color: #7D1E3A; /* Cor do texto */
+        }
+        .carousel {
+            position: relative;
+            width: 100%; /* Ocupar toda a largura da tela */
+            height: 100vh; /* Ocupar toda a altura da tela */
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%; /* Altura total do carrossel */
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%; /* Ajustar a altura da imagem */
+            object-fit: cover; /* Cobrir a área do slide */
+        }
+        .content {
+            max-width: 800px;
+            text-align: left;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #4B0E24; /* Tom de vinho mais escuro */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .button {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .whatsapp {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .whatsapp a {
+            text-decoration: none;
+            color: #7D1E3A; /* Cor vinho */
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .card-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex: 1;
+            max-width: 250px; /* Ajusta o tamanho máximo dos cards */
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .card-body {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Bem-vindo ao Nosso Site</h2>
+    </header>
+
+    <h1>Sobre Nós</h1> <!-- Título acima do carrossel -->
+
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide"><img src="https://media.gazetadopovo.com.br/2022/09/17190351/capa_shutterstock_734587048-960x540.jpg" alt="Imagem 1"></div>
+            <div class="slide"><img src="https://www.diarioeconomico.co.mz/wp-content/uploads/2021/09/vinhos-portugueses.jpg" alt="Imagem 2"></div>
+            <div class="slide"><img src="https://s2-g1.glbimg.com/sjAiRSV2fgGKZWEB94A1OvpeeJk=/0x0:1400x814/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/W/G/5BW8IRSXAg9Lftj34ImA/vinho-tinto-1400px-01.jpg" alt="Imagem 3"></div>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="prevSlide()">&#10094;</button>
+            <button class="button" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Nossa história começa com o amor pelos vinhos de qualidade e a vontade de compartilhar essa paixão com você. No Tinto&Branco, oferecemos uma seleção cuidadosamente escolhida de vinhos tintos e brancos, provenientes das melhores vinícolas do mundo. Cada rótulo que apresentamos foi selecionado não apenas pela sua qualidade, mas pela história e tradição que carrega.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Nosso objetivo é proporcionar a você experiências memoráveis a cada gole. Organizamos eventos de degustação, workshops de harmonização e encontros com sommeliers renomados, tudo para que você possa descobrir o universo dos vinhos de maneira acessível e prazerosa.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Seja você um apreciador experiente ou alguém que está apenas começando a explorar o mundo dos vinhos, aqui na Tinto&Branco, temos algo especial para todos. Venha nos visitar e deixe-se levar por uma jornada sensorial que combina sabor, aroma e conhecimento.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h3>Conheça a nossa equipe</h3>
+        <ul>
+            <li><strong>Emilly Duarte</strong> - Gerente</li>
+            <li><strong>Yan Medeiros</strong> - Vendedor</li>
+            <li><strong>Pedro Drummond</strong> - Fundador</li>
+            <li><strong>Emanoele Candido</strong> - Fundadora</li>
+        </ul>
+        <hr>
+        <p>Se tiver dúvidas, entre em contato conosco!</p>
+    </div>
+
+    <div class="whatsapp">
+        <p>Entre em contato conosco pelo WhatsApp:</p>
+        <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank">Iniciar Conversa</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+            slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+
+</body>
+</html>
